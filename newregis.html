@@ -1,0 +1,271 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Registration Form</title>
+	<script>
+	function registration()
+	{
+
+		//var name= document.getElementById("t1").value;
+		var email= document.getElementById("t2").value;
+		var uname= document.getElementById("t3").value;
+		var pwd= document.getElementById("t4").value;			
+		var cpwd= document.getElementById("t5").value;
+		
+        //email id expression code
+		var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+		var letters = /^[A-Za-z]+$/;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		/*if(name=='')
+		{
+			alert('Please enter your name');
+		}
+		else if(!letters.test(name))
+		{
+			alert('Name field required only alphabet characters');
+		}*/
+		if(uname=='')
+		{
+			alert('Please enter the user name.');
+            return false;
+		}
+		else if(!letters.test(uname))
+		{
+			alert('User name field required only alphabet characters');
+            return false;
+		}
+		else if(email=='')
+		{
+			alert('Please enter your user email id');
+            return false;
+		}
+		else if (!filter.test(email))
+		{
+			alert('Invalid email');
+            return false;
+		}
+		
+		else if(pwd=='')
+		{
+			alert('Please enter Password');
+            return false;
+		}
+		else if(cpwd=='')
+		{
+			alert('Enter Confirm Password');
+            return false;
+		}
+		else if(!pwd_expression.test(pwd))
+		{
+			alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+            return false;
+		}
+		else if(pwd != cpwd)
+		{
+			alert ('Password not Matched');
+            return false;
+		}
+		else if(document.getElementById("t5").value.length < 6)
+		{
+			alert ('Password minimum length is 6');
+            return false;
+		}
+		else if(document.getElementById("t5").value.length > 12)
+		{
+			alert ('Password max length is 12');
+            return false;
+		}
+		else
+		{				                            
+               alert('Thank You for Register & You are Redirecting to Login Page');
+			   // Redirecting to other page or webste code. 
+			   
+		}
+	}
+
+</script>
+  </head>
+	<style>body
+    {
+	    margin:0px;
+	    background-color:#cccccc;
+	    background-image:url(image/background.jpg);
+	    color:black;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    border-radius:5px; padding-left:10px; margin-top:100px; border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; padding-top:20px;
+    }
+    
+    #main table{font-family:"Comic Sans MS", cursive;}
+    /* css code for textbox */
+    #main .tb{height:28px; width:230px; border:1px solid #f26724; color:#fd7838; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;}
+    
+    #main .tb:focus{height:28px; border:1px solid #f26724; outline:none; border-left:5px solid #f7f7f7;}
+
+    /* css code for button*/
+   /* #main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: #f26724; letter-spacing: 1px; 
+    font-size:14px; background-color:#f1f1f1; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #main .btn:hover{background-color:#f26724; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+    -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; }*/
+    .label {
+  font-size: 15px;
+  color: #555;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 5px;
+ 
+}
+.input--style-4 {
+  line-height: 45px;
+  background: #fafafa;
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 50px;
+  font-size: 16px;
+  color: #666;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.input--style-4::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #666;
+  position: absolute;
+}
+
+.input--style-4:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666;
+  opacity: 1;
+  
+}
+
+.input--style-4::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666;
+  opacity: 1;
+}
+
+.input--style-4:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #666;
+  
+}
+
+.input--style-4:-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #666;
+  
+}
+.btn {
+  display: inline-block;
+  line-height: 40px;
+  padding: 5 50px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.btn--radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn--radius-2 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn--pill {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.btn--green {
+  background: #57b846;
+}
+
+.btn--green:hover {
+  background: #4dae3c;
+}
+
+.btn--blue {
+  background: gray;
+}
+
+.btn--blue:hover {
+  background: skyblue;
+}
+
+</style>
+	<body>
+    <form onsubmit="return registration()" action="newlogin.html" method="post">
+	<!-- Main div code -->
+		<div id="main">
+	<div class="h-tag">
+	<center><h2>Create Your Account</h2></center>
+	</div>
+	<!-- create account div -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right">Enter Username :</td>
+	<td><input type="text" placeholder="Enter Username " id="t3" class="input--style-4" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Email ID :</td>
+	<td><input type="text" placeholder="Enter Email ID " id="t2" class="input--style-4" /></td>
+	</tr>
+	
+	<tr>
+	<td align="right">Enter Password :</td>
+	<td><input type="password" placeholder="Create Password " id="t4" class="input--style-4" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Confirm Password :</td>
+	<td><input type="password" placeholder="Re-enter Password " id="t5" class="input--style-4" /></td>
+	</tr>
+    
+	<tr>
+	<td></td>
+	<td>
+	<input type="reset" value="Clear Form" id="res" class="btn btn--radius-2 btn--blue" />
+	<input type="submit" value="Create Account" class="btn btn--radius-2 btn--blue"/><br><br>
+	<center><a href="index.html" class="btn btn--radius-2 btn--blue"> Home </a></center></td>
+	</tr>
+	
+	</table>
+	</div>
+	<!-- create account box ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+    </form>
+	</body>
+	</html>
+
+
+ 
+
+
+    
+    
