@@ -1,0 +1,57 @@
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+
+#hourly_to_annual {
+	top: 264px;
+	left: 123px;
+	width: 324px;
+	height: 68px;
+	font-family: Rockwell;
+	font-size: 25px;
+	text-align: right;
+	color:white;
+}
+
+
+#annual_to_hourly {
+	top: 264px;
+	left: 123px;
+	width: 324px;
+	height: 68px;
+	font-family: Rockwell;
+	font-size: 25px;
+	text-align: right;
+	color:white;
+}
+.button {
+  background-color: gray; /* Green */
+  border: none;
+  color: white;
+  padding: 17px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid gray;
+}
+
+.button1:hover {
+  background-color: gray;
+  color: white;
+}
