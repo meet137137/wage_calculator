@@ -1,0 +1,39 @@
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="C:\Users\Akshayvaghasiya\Downloads\acer to dell\meet_ddu_documents\at project\css\newlogin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+<script>
+    function Function() {
+        var username = document.getElementById('uname').value.trim();
+        var password = document.getElementById('Pass').value.trim();
+        
+        if (username == "" || password == "") {
+            alert('error in username or password');
+	    	return false;
+        }
+		else{return true;}
+    }
+
+</script>
+</head>
+<body>
+    <div id="login">
+      <form onsubmit="return Function()" name='form-login' action="home1.html" method="post">
+        <span class="fontawesome-user"></span>
+          <input type="text" id="user" placeholder="Username" required>
+        <span class="fontawesome-lock"></span>
+          <input type="password" id"pass" placeholder="Password" minlength="8" required>
+        
+          <input type="Reset" class="myButton">
+
+           <a href="newforgot.html" class="linkButton"> Change Password ? </a><br><br> <a href="newregis.html" class="linkButton"> Tap For Register </a> <br><br> 
+           
+         <a href="home1.html" class="linkButton"> login </a>
+       <!-- <input type="submit" value="Login"><br><br>-->
+         <a href="index.html" class="linkButton"> Home </a>
+	</form>
+     </div>
+</body>
+</html>
